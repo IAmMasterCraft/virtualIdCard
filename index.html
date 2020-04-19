@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Page Title</title>
+		<title>NOUN ID Card</title>
 		<!--Google Form Font for signature-->
 		<link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
 		<style>
@@ -59,6 +58,8 @@
             /*#signature*/
             #signature {
                 font-family: 'Molle', cursive;
+                border-bottom: 1.5px dotted black;
+                padding: 0 10px 0 10px;
             }
 
             /*.back-title*/
@@ -140,7 +141,6 @@
             if (imageFile.files && imageFile.files[0]) {
                 var readImage = new FileReader();
                 readImage.onload = function (e) {
-                    // $("#static-passport").attr("src", e.target.result).width(90).height(104);
                     document.getElementById("static-passport").src = e.target.result;
                 }
                 readImage.readAsDataURL(imageFile.files[0]);

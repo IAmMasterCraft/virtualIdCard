@@ -95,7 +95,7 @@
 		        </div>
 		        <div class="card-user-info">
 		            <span class="user-info-title">Matric Number: </span>
-		            <small contenteditable="true">Click/Tap to Edit</small> <br />
+		            <small contenteditable="true">NOU. . . </small> <br />
 		            <span class="user-info-title" >Name: </span>
 		            <small id="name" contenteditable="true" oninput="makeSignature(this.innerHTML)">Click/Tap to Edit</small> <br />
 		            <span class="user-info-title">Programme: </span>
@@ -103,7 +103,7 @@
 		            <span class="user-info-title">Study Center: </span>
 		            <small contenteditable="true">Click/Tap to Edit</small> <br />
 		            <span class="user-info-title">Session: </span>
-		            <small contenteditable="true">Click/Tap to Edit</small> <br />
+		            <small id="session" contenteditable="true">Click/Tap to Edit</small> <br />
 		            <span class="user-info-title">Signature: </span>
 		            <small id="signature"></small>
 		        </div>
@@ -130,6 +130,8 @@
 		</div>
 	</body>
 	<script>
+        var date = new Date();
+	    document.getElementById("session").innerHTML = date.getFullYear() + "/. . . ";
 	    function makeSignature (editedName) {
 	       if (editedName.includes(" ")) {
 	           var names = editedName.split(" ");

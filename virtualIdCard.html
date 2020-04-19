@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Page Title</title>
+		<!--Google Form Font for signature-->
+		<link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
+		<style>
+            body {
+                text-align: center;
+                font-family: sans-serif;
+                margin: 15px;
+            }
+
+            /*.background-container*/
+            .background-container {
+                width: 374px;
+                border: 5px double wheat;
+                border-radius: 20px;
+            }
+
+            /*.school-logo*/
+            .school-logo {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            /*.school-name*/
+            .school-name {
+                margin-top: -20px;
+            }
+
+            /*#card-content-body*/
+            #card-content-body {
+                text-align: left;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                padding: 2%;
+            }
+
+            /*.card-user-image*/
+            .card-user-image {
+                float: left;
+                margin-left: 25px;
+            }
+
+            /*.card-user-info*/
+            .card-user-info {
+                width: 65%;
+                margin-left: 35%;
+                font-size: 15px;
+            }
+
+            /*.user-info-title*/
+            .user-info-title {
+                font-weight: bold;
+            }
+
+            /*#signature*/
+            #signature {
+                font-family: 'Molle', cursive;
+            }
+
+            /*.back-title*/
+            .back-title {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: 13px;
+            }
+
+            /*.back-content*/
+            .back-content {
+                padding : 0 35px 20px 35px;
+                text-align: justify;
+                font-size: 11px;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="background-container">
+		    <div class="school-logo">
+		        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Noun_logo_%2815188682875%29.jpg/593px-Noun_logo_%2815188682875%29.jpg" width="40px" height="40px" alt="NOUN_LOGO" />
+		    </div>
+		    <div class="school-name">
+		        <h4>
+		            NATIONAL OPEN UNIVERSITY OF NIGERIA  <br />
+		            Student Identity Card
+		        </h4>
+		    </div>
+		    <div id="card-content-body">
+		        <div class="card-user-image">
+		            <img id="static-passport" src="https://cdn2.vectorstock.com/i/thumbs/17/61/male-avatar-profile-picture-vector-10211761.jpg" width="90px" height="104px" alt="USER_IMG" onclick="document.getElementById('passport').click()" />
+		            <input type="file" name="photograph" id="passport" style="display:none;" onchange="loadImage(this)">
+		        </div>
+		        <div class="card-user-info">
+		            <span class="user-info-title">Matric Number: </span>
+		            <small contenteditable="true">Click/Tap to Edit</small> <br />
+		            <span class="user-info-title" >Name: </span>
+		            <small id="name" contenteditable="true" oninput="makeSignature(this.innerHTML)">Click/Tap to Edit</small> <br />
+		            <span class="user-info-title">Programme: </span>
+		            <small contenteditable="true">Click/Tap to Edit</small> <br />
+		            <span class="user-info-title">Study Center: </span>
+		            <small contenteditable="true">Click/Tap to Edit</small> <br />
+		            <span class="user-info-title">Session: </span>
+		            <small contenteditable="true">Click/Tap to Edit</small> <br />
+		            <span class="user-info-title">Signature: </span>
+		            <small id="signature"></small>
+		        </div>
+		    </div>
+		</div>
+		<hr>
+		<div class="background-container">
+		    <div class="back-title">
+		        USAGE POLICY
+		    </div>
+		    <div class="back-content">
+		        This card is the property of the National Open University of Nigeria and
+		        can be withdrawn without notice.
+		        It is neither a credit/debit card nor a cheque/cash guarantee card. The
+		        card is not transferable and may be <br />
+		        used only by the person whos name is printed on its face.
+		        For protection, this card should be signed immediately by the authorised
+		        user, under the Terms and Conditions for issuance of the card. 
+		        IF FOUND PLEASE RETURN TO <br />
+		        The Registrar, National Open University of Nigeria, University
+		        Village, Plot 91, Cadastral Zone C00, Nnamdi Azikiwe <br />
+		        Expressway, Jabi, Abuja - Nigeria
+		    </div>
+		</div>
+	</body>
+	<script>
+	    function makeSignature (editedName) {
+	       if (editedName.includes(" ")) {
+	           var names = editedName.split(" ");
+	           document.getElementById("signature").innerHTML = names[(names.length - 1)] + " " + names[0][0].toUpperCase() + ".";
+	       }
+	    }
+	    
+	    function loadImage(imageFile) {
+            if (imageFile.files && imageFile.files[0]) {
+                var readImage = new FileReader();
+                readImage.onload = function (e) {
+                    // $("#static-passport").attr("src", e.target.result).width(90).height(104);
+                    document.getElementById("static-passport").src = e.target.result;
+                }
+                readImage.readAsDataURL(imageFile.files[0]);
+            }
+        }
+	</script>
+</html>

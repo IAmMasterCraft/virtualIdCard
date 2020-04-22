@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo - ECC ID Card</title>
+		<!--Google Form Font for signature-->
+		<link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
+    <style>
+      body {
+
+      }
+
+      .card-background {
+          background-color: #e0d6d5;
+          width: 374px;
+          height: 250px;
+      }
+
+      .section-1 {
+          width: 40%;
+          height: 80%;
+          float: left;
+          /*border: 2px solid white;*/
+          /*background-color: grey;*/
+      }
+
+      .section-2 {
+          /*width: 35%;*/
+          height: 80%;
+          /*border: 2px solid white;*/
+      }
+
+      .container-logo {
+          text-align: center;
+          width: 100%;
+          height: 60%;
+          padding-top: 2.5%;
+          background-color: #050253;
+          border: 2px solid #050253;
+          border-radius: 0 0 50% 40%;
+      }
+
+      .container-passport {
+          text-align: center;
+          margin-top: -25%;
+          /*border: 2px solid white;*/
+      }
+
+      #passport {
+          margin-left: -10%;
+          border: 2px solid red;
+          border-radius: 10%;
+      }
+
+      .admission-number {
+          font-size: 9px;
+          text-align: center;
+          margin-top: -7%;
+          /*border: 2px solid white;*/
+      }
+
+      .school-name {
+          text-align: right;
+          font-family: sans-serif;
+          padding-top: 3%;
+          padding-left: 3%;
+          line-height: 50%;
+          background-color: #050253;
+          border: 2px solid #050253;
+          color: #c4c1ec;
+      }
+
+      .school-name-1 {
+          font-weight: bold;
+          font-size: 22px;
+      }
+
+      .school-name-2 {
+          font-weight: bold;
+          font-size: 15.5px;
+          margin-top: -6px;
+      }
+
+      .school-name-3 {
+          font-size: 6.5px;
+          margin-left: -25px;
+          margin-top: -3px;
+          padding-left: -50px;
+      }
+
+      .motto-address {
+          /*width: 80%;*/
+          /*margin-right: 20%;*/
+          text-align: center;
+          font-style: italic;
+          font-size: 10px;
+          font-weight: bold;
+          background: #e0d6d5;
+      }
+
+      .motto {
+          color: red;
+      }
+
+      .user-name {
+          font-weight: bold;
+          font-size: 13px;
+          float: left;
+          text-align: center;
+          padding-top: 1%;
+      }
+
+      .user-card-number {
+          font-size: 8px;
+          padding-top: 2%;
+      }
+
+      .user-info {
+          background-color: white;
+          /*float: right;*/
+          /*width: 70%;*/
+          margin-left: 35%;
+          border: 1px solid grey;
+          border-radius: 10%;
+      }
+
+      .user-info-body {
+          font-size: 13px;
+          display: inline-block;
+          line-height: 95%;
+      }
+
+      .user-info-title {
+          float: left;
+          text-align: right;
+      }
+
+      .section-3 {
+          display: block;
+          margin: 5% 0 0 0;
+          padding: 2% 0 2% 2%;
+          background-color: #050253;
+          color: #e0d6d5;
+      }
+
+      .card-name {
+          font-size: 17.5px;
+          font-weight: bold;
+      }
+
+      .signature {
+          float: right;
+          text-align: center;
+          margin: -17% 0 0 0;
+          padding: 5% 5% 0 15%;
+          line-height: 90%;
+          border-radius: 100% 0 0 0;
+          background-color: #050253;
+      }
+
+      .user-info-details {
+          width: 100%;
+          margin: 0 0 0 105%;
+          /*border: 2px solid green;*/
+      }
+
+      .signature-title {
+          font-size: 10px;
+          background-color: #fe0000;
+          padding: 0 3% 0 3%;
+      }
+
+      #signature-main {
+          font-family: 'Molle', cursive;
+          font-size: 13px;
+          border-bottom: 1.5px dotted #e0d6d5;
+          padding: 0 10px 0 10px;
+      }
+    </style>
+	</head>
+	<body>
+		<div class="card-background">
+		    <div class="section-1">
+    		    <div class="container-logo">
+    		        <img src="https://ecconline.ml/images/ecc.png" width=40% />
+    		    </div>
+    		    <div class="container-passport">
+    		        <img id="passport" src="https://cdn2.vectorstock.com/i/thumbs/17/61/male-avatar-profile-picture-vector-10211761.jpg" width="110px" height="110px" onclick="document.getElementById('photograph').click()" />
+                <input type="file" name="photograph" id="photograph" style="display:none;" onchange="loadImage(this)">
+    		    </div>
+    		    <div class="admission-number">
+    		        <p>Admission Number: ECCL/2020/001</p>
+    		    </div>
+    		</div>
+    		<div class="section-2">
+    		    <div class="school-name">
+    		        <div class="school-name-1">EMINENT CRYSTAL</div><br><br>
+    		        <div class="school-name-2">COLLEGE, ILE-OLUJI</div>
+    		        <span class="school-name-3">
+    		            (A Co-education school that develop active and creative mind in adolescents)
+    		        </span>
+    		    </div>
+    		    <div class="motto-address">
+    		        <span class="motto">Motto: Achievemment, Belief & Creativity</span><br>
+    		        <span class="address">78, Adejayan Street, Ile-Oluji. Ondo State</span>
+    		    </div>
+    		    <div class="user-info">
+    		        <div class="user-info-head">
+    		            <div class="user-name" contenteditable="true">SURNAME<br><span oninput="makeSignature(this.innerHTML)">GivenName</span> OtherName(s)</div>
+    		            <div class="user-card-number">ID CARD NO: 001</div>
+    		        </div>
+    		        <div class="user-info-body">
+    		            <div class="user-info-title">
+    		                Sex : <br>
+    		                Birthday : <br>
+    		                Home Address : <br>
+    		                Guardian : <br>
+    		                Emergency Call : <br>
+    		                Blood :
+    		            </div>
+    		            <div class="user-info-details">
+    		                <span contenteditable="true">Click/tap to edit</span> <br>
+    		                <span contenteditable="true">Click/tap to edit</span> <br>
+    		                <span contenteditable="true">Click/tap to edit</span> <br>
+    		                <span contenteditable="true">Click/tap to edit</span> <br>
+    		                <span contenteditable="true">Click/tap to edit</span> <br>
+    		                <span contenteditable="true">Click/tap to edit</span>
+    		            </div>
+    		        </div>
+    		    </div>
+    		</div>
+    		<div class="section-3">
+    		    <div class="card-name">Upper Basic Student's ID Card</div>
+    		    <div class="signature">
+    		        <span class="signature-title">Holder's Signature</span><br>
+    		        <span id="signature-main">Signature</span>
+    		    </div>
+    		</div>
+    	</div>
+		<script>
+      function makeSignature (editedName) {
+	       /*if (editedName.includes(" ")) {
+	           var names = editedName.split(" ");
+	           document.getElementById("signature").innerHTML = names[(names.length - 1)] + " " + names[0][0].toUpperCase() + ".";
+	       }*/
+         document.getElementById("signature-main").innerHTML = editedName;
+	    }
+	    
+	    function loadImage(imageFile) {
+            if (imageFile.files && imageFile.files[0]) {
+                var readImage = new FileReader();
+                readImage.onload = function (e) {
+                    document.getElementById("passport").src = e.target.result;
+                }
+                readImage.readAsDataURL(imageFile.files[0]);
+            }
+        }
+    </script>
+	</body>
+</html>

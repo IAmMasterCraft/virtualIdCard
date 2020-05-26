@@ -180,11 +180,22 @@
 		</div>
 		</div>
 		
+		<div id="download">
+			<label for="downloads">Select Download Option:</label>
+
+			<select name="downloads" id="cardDl" onchange="cardDownload ($('#name').text(), this.value)">
+			  <option value="''">Select one . . . </option>
+			  <option value="png">Download as PNG/IMAGE</option>
+			  <option value="pdf">Download as PDF</option>
+			</select>
+		</div>
+		
 		<div id="capture" style="padding: 10px; background: #f5da55; display: none;">
 		    <h4 style="color: #000; ">Hello world!</h4>
 		</div>
 	
 	<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+	<script type="text/javascript" src="./js/canvas2image.js"></script>
 	<script src="./js/card.js"></script>
 	<script>
         var date = new Date();
@@ -205,6 +216,13 @@
                 readImage.readAsDataURL(imageFile.files[0]);
             }
         }
+		function cardDownload (userName, fileType) {
+			if (userName == "Click/Tap to Edit") {alert('You have to fill the "name" field before downloading!')}
+			if (fileType == "png" && userName != "Click/Tap to Edit") {
+			    downloadPng (userName)
+			}
+			if (fileType == "pdf") {}
+		}
 	</script>
 	</body>
 </html>

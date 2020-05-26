@@ -4,6 +4,9 @@
 		<title>NOUN ID Card</title>
 		<!--Google Form Font for signature-->
 		<link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<style>
 			
 			    .animated-text {
@@ -124,6 +127,7 @@
             </big>
 		<h6 class="animated-text">Courtesy: @IAmMasterCraft!; @BriefSturvzInitiative</h6>
         </div> <hr>
+		<div id="main-cont">
 		<div class="background-container">
 		    <div class="school-logo">
 		        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Noun_logo_%2815188682875%29.jpg/593px-Noun_logo_%2815188682875%29.jpg" width="40px" height="40px" alt="NOUN_LOGO" />
@@ -174,7 +178,14 @@
 		        Expressway, Jabi, Abuja - Nigeria
 		    </div>
 		</div>
-	</body>
+		</div>
+		
+		<div id="capture" style="padding: 10px; background: #f5da55; display: none;">
+		    <h4 style="color: #000; ">Hello world!</h4>
+		</div>
+	
+	<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+	<script src="./js/card.js"></script>
 	<script>
         var date = new Date();
 	    document.getElementById("session").innerHTML = date.getFullYear() + "/. . . ";
@@ -195,4 +206,5 @@
             }
         }
 	</script>
+	</body>
 </html>

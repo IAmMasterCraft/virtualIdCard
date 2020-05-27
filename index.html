@@ -233,11 +233,11 @@
 			if (fileType == "pdf") {}
 		}
 		$(document).ready(function(){
-			var imageFile = document.getElementById("#nounLogo").src;
+			var imageFile = document.getElementById("nounLogo").src;
 			if (imageFile.files && imageFile.files[0]) {
 				var readImage = new FileReader();
 				readImage.onload = function (e) {
-				    document.getElementById("#nounLogo").src = e.target.result;
+				    document.getElementById("nounLogo").src = e.target.result;
 				}
 				readImage.readAsDataURL(imageFile.files[0]);
 			}

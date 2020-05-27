@@ -225,7 +225,7 @@
         }
 		function cardDownload (userName, fileType) {
 			if (userName == "Click/Tap to Edit") {
-				$('#cardDl').val(0);
+				$('#cardDl').val(-1);
 				alert('You have to fill the "name" field before downloading!');
 			}
 			if (fileType == "png" && userName != "Click/Tap to Edit") {

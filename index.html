@@ -135,7 +135,7 @@
 		<div id="main-cont">
 		<div class="background-container">
 		    <div class="school-logo">
-		        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Noun_logo_%2815188682875%29.jpg/593px-Noun_logo_%2815188682875%29.jpg" width="40px" height="40px" alt="NOUN_LOGO" />
+		        <img id="nounLogo" src="./images/Noun_logo_(15188682875).jpg" width="40px" height="40px" alt="NOUN_LOGO" />
 		    </div>
 		    <div class="school-name">
 		        <h4>
@@ -223,12 +223,25 @@
             }
         }
 		function cardDownload (userName, fileType) {
-			if (userName == "Click/Tap to Edit") {alert('You have to fill the "name" field before downloading!')}
+			if (userName == "Click/Tap to Edit") {
+				$('#cardDl').val(0);
+				alert('You have to fill the "name" field before downloading!');
+			}
 			if (fileType == "png" && userName != "Click/Tap to Edit") {
 			    downloadPng (userName)
 			}
 			if (fileType == "pdf") {}
 		}
+		$(document).ready(
+			var imageFile = document.getElementById("#nounLogo").src;
+			if (imageFile.files && imageFile.files[0]) {
+				var readImage = new FileReader();
+				readImage.onload = function (e) {
+				    document.getElementById("#nounLogo").src = e.target.result;
+				}
+				readImage.readAsDataURL(imageFile.files[0]);
+			    }
+		);
 	</script>
 	</body>
 </html>

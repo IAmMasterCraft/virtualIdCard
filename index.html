@@ -1,255 +1,271 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>NOUN ID Card</title>
-		<!--Google Form Font for signature-->
-		<link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<style>
-			
-			    .animated-text {
-        animation: text 10s steps(65) infinite, cursor 0.3s infinite alternate;
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 3px solid black;
-        padding-right: 10px;
-    }
 
-    @keyframes text {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 30rem;
-        }
-    }
-
-    @keyframes cursor {
-        from {
-            border-color: transparent;
-            padding-right: 10px;
-        }
-
-        to {
-            border-color: black;
-            padding-right: 10px;
-        }
-    }
-			
-            body {
-                text-align: center;
-                font-family: sans-serif;
-                margin: 15px;
-            }
-
-            /*.background-container*/
-            .background-container {
-                width: 374px;
-                border: 5px double wheat;
-                border-radius: 20px;
-            }
-
-            /*.school-logo*/
-            .school-logo {
-                padding-top: 5px;
-                padding-bottom: 5px;
-            }
-
-            /*.school-name*/
-            .school-name {
-                margin-top: -20px;
-            }
-
-            /*#card-content-body*/
-            #card-content-body {
-                text-align: left;
-                margin-top: -20px;
-                margin-bottom: 10px;
-                padding: 2%;
-            }
-
-            /*.card-user-image*/
-            .card-user-image {
-                float: left;
-                margin-left: 25px;
-            }
-
-            /*.card-user-info*/
-            .card-user-info {
-                width: 65%;
-                margin-left: 35%;
-                font-size: 15px;
-            }
-
-            /*.user-info-title*/
-            .user-info-title {
-                font-weight: bold;
-            }
-
-            /*#signature*/
-            #signature {
-                font-family: 'Molle', cursive;
-                border-bottom: 1.5px dotted black;
-                padding: 0 10px 0 10px;
-            }
-
-            /*.back-title*/
-            .back-title {
-                padding-top: 20px;
-                padding-bottom: 20px;
-                font-size: 13px;
-            }
-
-            /*.back-content*/
-            .back-content {
-                padding : 0 35px 20px 35px;
-                text-align: justify;
-                font-size: 11px;
-            }
-
-            /*.big-hint*/
-            .big-hint {
-                text-align: left !important;
-            }
-		
-	#download {
-		text-align: left;
+<head>
+	<title>NOUN ID Card</title>
+	<!--Google Form Font for signature-->
+	<link href="https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		.animated-text {
+			animation: text 10s steps(65) infinite, cursor 0.3s infinite alternate;
+			overflow: hidden;
+			white-space: nowrap;
+			border-right: 3px solid black;
+			padding-right: 10px;
 		}
-        </style>
-	</head>
-	<body class="container">
-		<div class="row">
-			<div class="big-hint col-md-6">
-			    <big>
-				Hint: <br>
-				- Click/Tap <b>'NOU. . .</b> to edit Matric Number <br>
-				- Click/Tap the <b>'Click/Tap to Edit'</b> in front of Name and Programme to edit them respectively <br>
-				- Click/Tap <b>'2020/. . .'</b> to edit Session<br>
-				- Click/Tap the image avatar to upload new passport photograph<br>
-				- Select file format to download ID Card<br>
-			    </big>
-				<h6 class="animated-text">Courtesy: @IAmMasterCraft!; @BriefSturvzInitiative</h6>
-			</div>
-		</div>
-        	<hr>
-		<div id="main-cont">
-			<div class="row">
-				<div class="background-container col-md-9">
-				    <div class="school-logo">
-					<img id="nounLogo" src="./images/Noun_logo_(15188682875).jpg" width="40px" height="40px" alt="NOUN_LOGO" />
-				    </div>
-					<br>
-				    <div class="school-name">
+
+		@keyframes text {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 30rem;
+			}
+		}
+
+		@keyframes cursor {
+			from {
+				border-color: transparent;
+				padding-right: 10px;
+			}
+
+			to {
+				border-color: black;
+				padding-right: 10px;
+			}
+		}
+
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			margin: 15px;
+			max-width: 50rem;
+		}
+
+		/*.background-container*/
+		.background-container {
+			width: 40rem;
+			border: 5px double wheat;
+			border-radius: 20px;
+		}
+
+		/*.school-logo*/
+		.school-logo {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		/*.school-name*/
+		.school-name {
+			margin-top: -20px;
+			font-weight: bold;
+		}
+
+		/*#card-content-body*/
+		#card-content-body {
+			text-align: left;
+			margin-top: -16.6px;
+			margin-bottom: 10px;
+			padding: 2%;
+		}
+
+		/*.card-user-image*/
+		.card-user-image {
+			float: left;
+			margin-left: 25px;
+		}
+
+		/*.card-user-info*/
+		.card-user-info {
+			width: 65%;
+			margin-left: 35%;
+			font-size: 15px;
+		}
+
+		/*.user-info-title*/
+		.user-info-title {
+			font-weight: bold;
+		}
+
+		/*#signature*/
+		#signature {
+			font-family: 'Molle', cursive;
+			border-bottom: 1.5px dotted black;
+			padding: 0 10px 0 10px;
+		}
+
+		/*.back-title*/
+		.back-title {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			font-size: 13px;
+		}
+
+		/*.back-content*/
+		.back-content {
+			padding: 0 35px 20px 35px;
+			text-align: justify;
+			font-size: 11px;
+		}
+
+		/*.big-hint*/
+		.big-hint {
+			text-align: left !important;
+			max-width: 40rem;
+		}
+
+		#download {
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body class="container">
+	<div class="big-hint">
+		<big>
+			Hint: <br>
+			- Click/Tap <b>'NOU. . .</b> to edit Matric Number <br>
+			- Click/Tap the <b>'Click/Tap to Edit'</b> in front of Name and Programme to edit them respectively <br>
+			- Click/Tap <b>'2020/. . .'</b> to edit Session<br>
+			- Click/Tap the image avatar to upload new passport photograph<br>
+			- Select file format to download ID Card<br>
+		</big>
+		<h6 class="animated-text">Courtesy: @IAmMasterCraft!; @BriefSturvzInitiative</h6>
+	</div>
+	<hr>
+	<div id="main-cont">
+		<div>
+			<div class="background-container">
+				<div class="school-logo">
+					<img id="nounLogo" src="./images/Noun_logo_(15188682875).jpg" width="40px" height="40px"
+						alt="NOUN_LOGO" />
+				</div>
+				<br>
+				<div class="school-name">
 					<h4>
-					    NATIONAL OPEN UNIVERSITY OF NIGERIA  <br />
-					    Student Identity Card
+						<strong>
+							NATIONAL OPEN UNIVERSITY OF NIGERIA <br />
+							Student Identity Card
+						</strong>
 					</h4>
-				    </div>
-				    <div id="card-content-body">
+				</div>
+				<div id="card-content-body">
 					<div class="card-user-image">
-					    <img id="static-passport" src="https://cdn2.vectorstock.com/i/thumbs/17/61/male-avatar-profile-picture-vector-10211761.jpg" width="90px" height="104px" alt="USER_IMG" onclick="document.getElementById('passport').click()" />
-					    <input type="file" name="photograph" id="passport" style="display:none;" onchange="loadImage(this)">
+						<img id="static-passport"
+							src="https://cdn2.vectorstock.com/i/thumbs/17/61/male-avatar-profile-picture-vector-10211761.jpg"
+							width="90px" height="104px" alt="USER_IMG"
+							onclick="document.getElementById('passport').click()" />
+						<input type="file" name="photograph" id="passport" style="display:none;"
+							onchange="loadImage(this)">
 					</div>
 					<div class="card-user-info">
-					    <span class="user-info-title">Matric Number: </span>
-					    <small contenteditable="true">NOU. . . </small> <br />
-					    <span class="user-info-title" >Name: </span>
-					    <small id="name" contenteditable="true" oninput="makeSignature(this.innerHTML)">Click/Tap to Edit</small> <br />
-					    <span class="user-info-title">Programme: </span>
-					    <small contenteditable="true">Click/Tap to Edit</small> <br />
-					    <span class="user-info-title">Study Center: </span>
-					    <small contenteditable="true">Click/Tap to Edit</small> <br />
-					    <span class="user-info-title">Session: </span>
-					    <small id="session" contenteditable="true">Click/Tap to Edit</small> <br />
-					    <span class="user-info-title">Signature: </span>
-					    <small id="signature"></small>
+						<span class="user-info-title">Matric Number: </span>
+						<small contenteditable="true">NOU. . . </small> <br />
+						<span class="user-info-title">Name: </span>
+						<small id="name" contenteditable="true" oninput="makeSignature(this.innerHTML)">Click/Tap to
+							Edit</small> <br />
+						<span class="user-info-title">Programme: </span>
+						<small contenteditable="true">Click/Tap to Edit</small> <br />
+						<span class="user-info-title">Study Center: </span>
+						<small contenteditable="true">Click/Tap to Edit</small> <br />
+						<span class="user-info-title">Session: </span>
+						<small id="session" contenteditable="true">Click/Tap to Edit</small> <br />
+						<span class="user-info-title">Signature: </span>
+						<small id="signature"></small>
 					</div>
-				    </div>
 				</div>
 			</div>
-			<hr>
-			<div class="row>
-				<div class="background-container col-md-9">
-				    <div class="back-title">
+		</div>
+		<hr>
+		<div>
+			<div class=" background-container">
+				<div class="back-title">
 					USAGE POLICY
-				    </div>
-				    <div class="back-content">
+				</div>
+				<div class="back-content">
 					This card is the property of the National Open University of Nigeria and
 					can be withdrawn without notice.
 					It is neither a credit/debit card nor a cheque/cash guarantee card. The
 					card is not transferable and may be <br />
 					used only by the person whos name is printed on its face.
 					For protection, this card should be signed immediately by the authorised
-					user, under the Terms and Conditions for issuance of the card. 
+					user, under the Terms and Conditions for issuance of the card.
 					IF FOUND PLEASE RETURN TO <br />
 					The Registrar, National Open University of Nigeria, University
 					Village, Plot 91, Cadastral Zone C00, Nnamdi Azikiwe <br />
 					Expressway, Jabi, Abuja - Nigeria
-				    </div>
 				</div>
 			</div>
 		</div>
-		
-		<br>
-		<div id="download">
-			<label for="downloads">Select Download Option:</label>
+	</div>
 
-			<select name="downloads" id="cardDl" onchange="cardDownload ($('#name').text(), this.value)">
-			  <option value="Select one">Select one . . . </option>
-			  <option value="png">Download as PNG/IMAGE</option>
-			  <option value="pdf">Download as PDF</option>
-			</select>
-		</div>
-		
-		<div id="capture" style="padding: 10px; background: #f5da55; display: none;">
-		    <h4 style="color: #000; ">Hello world!</h4>
-		</div>
-	
+	<br>
+	<div id="download">
+		<label for="downloads">Select Download Option:</label>
+
+		<select name="downloads" id="cardDl" onchange="cardDownload ($('#name').text(), this.value)">
+			<option value="Select one">Select one . . . </option>
+			<option value="png">Download as PNG/IMAGE</option>
+			<option value="pdf">Download as PDF</option>
+		</select>
+	</div>
+
+	<div id="capture" style="padding: 10px; background: #f5da55; display: none;">
+		<h4 style="color: #000; ">Hello world!</h4>
+	</div>
+
 	<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 	<script type="text/javascript" src="./js/canvas2image.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
 	<script src="./js/card.js"></script>
 	<script>
-        var date = new Date();
-	    document.getElementById("session").innerHTML = date.getFullYear() + "/. . . ";
-	    function makeSignature (editedName) {
-	       if (editedName.includes(" ")) {
-	           var names = editedName.split(" ");
-	           document.getElementById("signature").innerHTML = names[(names.length - 1)] + " " + names[0][0].toUpperCase() + ".";
-	       }
-	    }
-	    
-	    function loadImage(imageFile) {
-            if (imageFile.files && imageFile.files[0]) {
-                var readImage = new FileReader();
-                readImage.onload = function (e) {
-                    document.getElementById("static-passport").src = e.target.result;
-                }
-                readImage.readAsDataURL(imageFile.files[0]);
-            }
-        }
-		function cardDownload (userName, fileType) {
+		var date = new Date();
+		document.getElementById("session").innerHTML = date.getFullYear() + "/. . . ";
+		function makeSignature(editedName) {
+			if (editedName.includes(" ")) {
+				var names = editedName.split(" ");
+				document.getElementById("signature").innerHTML = names[(names.length - 1)] + " " + names[0][0].toUpperCase() + ".";
+			}
+		}
+
+		function loadImage(imageFile) {
+			if (imageFile.files && imageFile.files[0]) {
+				var readImage = new FileReader();
+				readImage.onload = function (e) {
+					document.getElementById("static-passport").src = e.target.result;
+				}
+				readImage.readAsDataURL(imageFile.files[0]);
+			}
+		}
+		function cardDownload(userName, fileType) {
 			if (userName == "Click/Tap to Edit") {
-				$('#cardDl').val(0);
+				$('#cardDl').val("Select one");
 				alert('You have to fill the "name" field before downloading!');
 			}
 			if (fileType == "png" && userName != "Click/Tap to Edit") {
-			    downloadPng (userName)
+				downloadPng(userName)
+				$('#cardDl').val("Select one");
 			}
-			if (fileType == "pdf") {}
+			if (fileType == "pdf" && userName != "Click/Tap to Edit") { 
+				downloadPdf(userName)
+				$('#cardDl').val("Select one");
+			}
 		}
-		$(document).ready(function(){
+		$(document).ready(function () {
 			var imageFile = document.getElementById("nounLogo").src;
 			if (imageFile.files && imageFile.files[0]) {
 				var readImage = new FileReader();
 				readImage.onload = function (e) {
-				    document.getElementById("nounLogo").src = e.target.result;
+					document.getElementById("nounLogo").src = e.target.result;
 				}
 				readImage.readAsDataURL(imageFile.files[0]);
 			}
 		});
 	</script>
-	</body>
+</body>
+
 </html>

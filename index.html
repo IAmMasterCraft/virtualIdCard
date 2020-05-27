@@ -120,70 +120,77 @@
 		}
         </style>
 	</head>
-	<body>
-        <div class="big-hint col-md-6">
-            <big>
-                Hint: <br>
-                - Click/Tap <b>'NOU. . .</b> to edit Matric Number <br>
-                - Click/Tap the <b>'Click/Tap to Edit'</b> in front of Name and Programme to edit them respectively <br>
-                - Click/Tap <b>'2020/. . .'</b> to edit Session<br>
-                - Click/Tap the image avatar to upload new passport photograph<br>
-		- Select file format to download ID Card<br>
-            </big>
-		<h6 class="animated-text">Courtesy: @IAmMasterCraft!; @BriefSturvzInitiative</h6>
-        </div> <hr>
-		<div id="main-cont" class="row">
-		<div class="background-container">
-		    <div class="school-logo">
-		        <img id="nounLogo" src="./images/Noun_logo_(15188682875).jpg" width="40px" height="40px" alt="NOUN_LOGO" />
-		    </div>
-			<br>
-		    <div class="school-name">
-		        <h4>
-		            NATIONAL OPEN UNIVERSITY OF NIGERIA  <br />
-		            Student Identity Card
-		        </h4>
-		    </div>
-		    <div id="card-content-body">
-		        <div class="card-user-image">
-		            <img id="static-passport" src="https://cdn2.vectorstock.com/i/thumbs/17/61/male-avatar-profile-picture-vector-10211761.jpg" width="90px" height="104px" alt="USER_IMG" onclick="document.getElementById('passport').click()" />
-		            <input type="file" name="photograph" id="passport" style="display:none;" onchange="loadImage(this)">
-		        </div>
-		        <div class="card-user-info">
-		            <span class="user-info-title">Matric Number: </span>
-		            <small contenteditable="true">NOU. . . </small> <br />
-		            <span class="user-info-title" >Name: </span>
-		            <small id="name" contenteditable="true" oninput="makeSignature(this.innerHTML)">Click/Tap to Edit</small> <br />
-		            <span class="user-info-title">Programme: </span>
-		            <small contenteditable="true">Click/Tap to Edit</small> <br />
-		            <span class="user-info-title">Study Center: </span>
-		            <small contenteditable="true">Click/Tap to Edit</small> <br />
-		            <span class="user-info-title">Session: </span>
-		            <small id="session" contenteditable="true">Click/Tap to Edit</small> <br />
-		            <span class="user-info-title">Signature: </span>
-		            <small id="signature"></small>
-		        </div>
-		    </div>
+	<body class="container">
+		<div class="row">
+			<div class="big-hint col-md-6">
+			    <big>
+				Hint: <br>
+				- Click/Tap <b>'NOU. . .</b> to edit Matric Number <br>
+				- Click/Tap the <b>'Click/Tap to Edit'</b> in front of Name and Programme to edit them respectively <br>
+				- Click/Tap <b>'2020/. . .'</b> to edit Session<br>
+				- Click/Tap the image avatar to upload new passport photograph<br>
+				- Select file format to download ID Card<br>
+			    </big>
+				<h6 class="animated-text">Courtesy: @IAmMasterCraft!; @BriefSturvzInitiative</h6>
+			</div>
 		</div>
-		<hr>
-		<div class="background-container">
-		    <div class="back-title">
-		        USAGE POLICY
-		    </div>
-		    <div class="back-content">
-		        This card is the property of the National Open University of Nigeria and
-		        can be withdrawn without notice.
-		        It is neither a credit/debit card nor a cheque/cash guarantee card. The
-		        card is not transferable and may be <br />
-		        used only by the person whos name is printed on its face.
-		        For protection, this card should be signed immediately by the authorised
-		        user, under the Terms and Conditions for issuance of the card. 
-		        IF FOUND PLEASE RETURN TO <br />
-		        The Registrar, National Open University of Nigeria, University
-		        Village, Plot 91, Cadastral Zone C00, Nnamdi Azikiwe <br />
-		        Expressway, Jabi, Abuja - Nigeria
-		    </div>
-		</div>
+        	<hr>
+		<div id="main-cont">
+			<div class="row">
+				<div class="background-container col-md-9">
+				    <div class="school-logo">
+					<img id="nounLogo" src="./images/Noun_logo_(15188682875).jpg" width="40px" height="40px" alt="NOUN_LOGO" />
+				    </div>
+					<br>
+				    <div class="school-name">
+					<h4>
+					    NATIONAL OPEN UNIVERSITY OF NIGERIA  <br />
+					    Student Identity Card
+					</h4>
+				    </div>
+				    <div id="card-content-body">
+					<div class="card-user-image">
+					    <img id="static-passport" src="https://cdn2.vectorstock.com/i/thumbs/17/61/male-avatar-profile-picture-vector-10211761.jpg" width="90px" height="104px" alt="USER_IMG" onclick="document.getElementById('passport').click()" />
+					    <input type="file" name="photograph" id="passport" style="display:none;" onchange="loadImage(this)">
+					</div>
+					<div class="card-user-info">
+					    <span class="user-info-title">Matric Number: </span>
+					    <small contenteditable="true">NOU. . . </small> <br />
+					    <span class="user-info-title" >Name: </span>
+					    <small id="name" contenteditable="true" oninput="makeSignature(this.innerHTML)">Click/Tap to Edit</small> <br />
+					    <span class="user-info-title">Programme: </span>
+					    <small contenteditable="true">Click/Tap to Edit</small> <br />
+					    <span class="user-info-title">Study Center: </span>
+					    <small contenteditable="true">Click/Tap to Edit</small> <br />
+					    <span class="user-info-title">Session: </span>
+					    <small id="session" contenteditable="true">Click/Tap to Edit</small> <br />
+					    <span class="user-info-title">Signature: </span>
+					    <small id="signature"></small>
+					</div>
+				    </div>
+				</div>
+			</div>
+			<hr>
+			<div class="row>
+				<div class="background-container col-md-9">
+				    <div class="back-title">
+					USAGE POLICY
+				    </div>
+				    <div class="back-content">
+					This card is the property of the National Open University of Nigeria and
+					can be withdrawn without notice.
+					It is neither a credit/debit card nor a cheque/cash guarantee card. The
+					card is not transferable and may be <br />
+					used only by the person whos name is printed on its face.
+					For protection, this card should be signed immediately by the authorised
+					user, under the Terms and Conditions for issuance of the card. 
+					IF FOUND PLEASE RETURN TO <br />
+					The Registrar, National Open University of Nigeria, University
+					Village, Plot 91, Cadastral Zone C00, Nnamdi Azikiwe <br />
+					Expressway, Jabi, Abuja - Nigeria
+				    </div>
+				</div>
+			</div>
 		</div>
 		
 		<br>

@@ -191,7 +191,7 @@
 			<label for="downloads">Select Download Option:</label>
 
 			<select name="downloads" id="cardDl" onchange="cardDownload ($('#name').text(), this.value)">
-			  <option value="''">Select one . . . </option>
+			  <option value="Select one">Select one . . . </option>
 			  <option value="png">Download as PNG/IMAGE</option>
 			  <option value="pdf">Download as PDF</option>
 			</select>
@@ -225,7 +225,7 @@
         }
 		function cardDownload (userName, fileType) {
 			if (userName == "Click/Tap to Edit") {
-				$('#cardDl').val(-1);
+				$('#cardDl').val(0);
 				alert('You have to fill the "name" field before downloading!');
 			}
 			if (fileType == "png" && userName != "Click/Tap to Edit") {

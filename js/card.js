@@ -2,6 +2,7 @@
 function downloadPng(userName) {
   html2canvas(document.querySelector("#main-cont"), {
     scrollY: -window.scrollY,
+    scrollX: -window.scrollX,
   }).then((canvas) => {
     document.querySelector("#capture").appendChild(canvas);
     Canvas2Image.saveAsImage(canvas, null, null, "png", userName);
@@ -13,10 +14,11 @@ function downloadPdf(userName) {
   var doc = new jsPDF();
   html2canvas(document.querySelector("#main-cont"), {
     scrollY: -window.scrollY,
+    scrollX: -window.scrollX,
   }).then((canvas) => {
     document.querySelector("#capture").appendChild(canvas);
     var img=canvas.toDataURL("image/png", 1.0);
-    doc.addImage(img, 'JPEG', 10, 10, (canvas.width/10), (canvas.height/10));
+    doc.addImage(img, 'JPEG', 10, 10, (canvas.width), (canvas.height));
     doc.save(userName + ".pdf");
   });
   // doc.text("Hello world!", 10, 10);

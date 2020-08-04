@@ -1,6 +1,8 @@
 /*IAmMasterCraft*/
 function downloadPng(userName) {
-  html2canvas(document.querySelector("#main-cont")).then((canvas) => {
+  html2canvas(document.querySelector("#main-cont"), {
+    scrollY: -window.scrollY,
+  }).then((canvas) => {
     document.querySelector("#capture").appendChild(canvas);
     Canvas2Image.saveAsImage(canvas, null, null, "png", userName);
     return downloadFileCallBack("png");
@@ -9,9 +11,11 @@ function downloadPng(userName) {
 
 function downloadPdf(userName) {
   var doc = new jsPDF();
-  html2canvas(document.querySelector("#main-cont")).then((canvas) => {
+  html2canvas(document.querySelector("#main-cont"), {
+    scrollY: -window.scrollY,
+  }).then((canvas) => {
     document.querySelector("#capture").appendChild(canvas);
-    var img=canvas.toDataURL("image/png");
+    var img=canvas.toDataURL("image/png", 1.0);
     doc.addImage(img, 'JPEG', 10, 10, (canvas.width/10), (canvas.height/10));
     doc.save(userName + ".pdf");
   });

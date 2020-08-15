@@ -206,14 +206,16 @@
 
 	<br>
 	<div id="download">
-		<label for="downloads">Select Download Option:</label>
+		<label for="downloads">Generate Download Link:</label>
 
 		<select name="downloads" id="cardDl" onchange="cardDownload ($('#name').text(), this.value)">
 			<option value="Select one">Select one . . . </option>
-			<option value="png">Download as PNG/IMAGE</option>
-			<option value="pdf">Download as PDF</option>
+			<option value="png">PNG/IMAGE</option>
+			<option value="pdf">PDF</option>
 		</select>
 	</div>
+	<hr />
+	<a id="dl_link" href="#" style="display: none;">Download ID Card . . . </a>
 
 	<div id="capture" style="padding: 10px; background: #f5da55; display: none;">
 		<h4 style="color: #000; ">Hello world!</h4>

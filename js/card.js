@@ -20,13 +20,13 @@ function downloadPdf(userName) {
     var img=canvas.toDataURL("image/png", 1.0);
     doc.addImage(img, 'JPEG', 10, 10, (canvas.width), (canvas.height));
 //     doc.save(userName + ".pdf");
-    var blobPDF = new Blob([doc.output('blob')], {type : 'application/pdf'});
-    var blobUrl = URL.createObjectURL(blobPDF);
+//     var blobPDF = new Blob([doc.output('blob')], {type : 'application/pdf'});
+//     var blobUrl = URL.createObjectURL(blobPDF);
     $.when(
-      $("#dl_link").attr('href', blobUrl).show()
-//       doc.output('datauri')
+//       $("#dl_link").attr('href', blobUrl).show()
+      doc.output('datauri')
     ).done(
-      $("#dl_link").click(function(){
+//       $("#dl_link").click(function(){
         downloadFileCallBack("pdf");
       })
     );

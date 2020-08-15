@@ -20,11 +20,14 @@ function downloadPdf(userName) {
     var img=canvas.toDataURL("image/png", 1.0);
     doc.addImage(img, 'JPEG', 10, 10, (canvas.width/2), (canvas.height/2));
 //     doc.save(userName + ".pdf");
-    doc.output('datauri');
+    $("#dl_link").attr('href', doc.output('datauristring')).show(function(){
+      downloadFileCallBack("pdf");
+    });
+    
   });
   // doc.text("Hello world!", 10, 10);
   // doc.save(userName + ".pdf");
-  return downloadFileCallBack("pdf");
+//   return downloadFileCallBack("pdf");
 }
 
 function downloadFileCallBack(fileType) {

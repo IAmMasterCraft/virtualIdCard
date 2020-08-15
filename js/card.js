@@ -18,7 +18,7 @@ function downloadPdf(userName) {
   }).then((canvas) => {
     document.querySelector("#capture").appendChild(canvas);
     var img=canvas.toDataURL("image/png", 1.0);
-    doc.addImage(img, 'JPEG', 10, 10, (canvas.width/2), (canvas.height/2);
+    doc.addImage(img, 'JPEG', 10, 10, (canvas.width/2), (canvas.height/2));
 //     doc.save(userName + ".pdf");
     doc.output('datauri');
   });

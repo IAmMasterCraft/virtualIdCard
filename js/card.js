@@ -39,7 +39,7 @@ function downloadFileCallBack(fileType) {
   if (fileType == "pdf") {
     setTimeout(
       alert(
-        "The generated ID Card [PDF Format] has been downloaded to your device please check your download folder. It is saved with your name!"
+        "The generated ID Card [PDF Format] has been downloaded to your device please check your download folder. It is saved with 'NOUN_ID_CARD_'!"
       ),
       10000
     );

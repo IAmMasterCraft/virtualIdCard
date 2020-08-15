@@ -19,11 +19,22 @@ function downloadPdf(userName) {
     document.querySelector("#capture").appendChild(canvas);
     var img=canvas.toDataURL("image/png", 1.0);
     doc.addImage(img, 'JPEG', 10, 10, (canvas.width), (canvas.height));
-    doc.save(userName + ".pdf");
+//     doc.save(userName + ".pdf");
+    var blobPDF = new Blob([doc.output('blob')], {type : 'application/pdf'});
+    var blobUrl = URL.createObjectURL(blobPDF);
+    $.when(
+      $("#dl_link").attr('href', blobUrl).show()
+//       doc.output('datauri')
+    ).done(
+      $("#dl_link").click(function(){
+        downloadFileCallBack("pdf");
+      })
+    );
+    
   });
   // doc.text("Hello world!", 10, 10);
   // doc.save(userName + ".pdf");
-  return downloadFileCallBack("pdf");
+//   return downloadFileCallBack("pdf");
 }
 
 function downloadFileCallBack(fileType) {

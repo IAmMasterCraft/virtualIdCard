@@ -20,10 +20,8 @@ function downloadPdf(userName) {
     var img=canvas.toDataURL("image/png", 1.0);
     doc.addImage(img, 'JPEG', 10, 10, (canvas.width), (canvas.height));
 //     doc.save(userName + ".pdf");
-//     var blobPDF = new Blob([doc.output('blob')], {type : 'application/pdf'});
-//     var blobUrl = URL.createObjectURL(blobPDF);
     doc.output('datauri');
-    
+  });
   // doc.text("Hello world!", 10, 10);
   // doc.save(userName + ".pdf");
   return downloadFileCallBack("pdf");

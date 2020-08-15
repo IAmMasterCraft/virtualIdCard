@@ -27,8 +27,9 @@ function downloadPdf(userName) {
       doc.output('datauri')
     ).done(
 //       $("#dl_link").click(function(){
-        downloadFileCallBack("pdf");
-      })
+        
+//       })
+    downloadFileCallBack("pdf");
     );
     
   });

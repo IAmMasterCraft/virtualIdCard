@@ -22,20 +22,11 @@ function downloadPdf(userName) {
 //     doc.save(userName + ".pdf");
 //     var blobPDF = new Blob([doc.output('blob')], {type : 'application/pdf'});
 //     var blobUrl = URL.createObjectURL(blobPDF);
-    $.when(
-//       $("#dl_link").attr('href', blobUrl).show()
-      doc.output('datauri')
-    ).done(
-//       $("#dl_link").click(function(){
-        
-//       })
-    downloadFileCallBack("pdf");
-    );
+    doc.output('datauri');
     
-  });
   // doc.text("Hello world!", 10, 10);
   // doc.save(userName + ".pdf");
-//   return downloadFileCallBack("pdf");
+  return downloadFileCallBack("pdf");
 }
 
 function downloadFileCallBack(fileType) {

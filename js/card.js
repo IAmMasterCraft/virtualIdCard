@@ -20,12 +20,14 @@ function downloadPdf(userName) {
     var img=canvas.toDataURL("image/png", 1.0);
     doc.addImage(img, 'JPEG', 10, 10, (canvas.width/4), (canvas.height/4));
 //     doc.save(userName + ".pdf");
-    var string = doc.output('datauristring');
+//     var string = doc.output('datauristring');
+    var blobPDF = new Blob([doc.output('blob')], {type : 'application/pdf'});
+    var blobUrl = URL.createObjectURL(blobPDF);
 //     var iframe = "<iframe width='100%' height='100%' src='" + string + "'></iframe>"
 //     var x = window.open();
 //     x.document.open();
 //     x.document.write(iframe);
-    $("#dl_link").attr("href", string).show();
+    $("#dl_link").attr("href", blobUrl).show();
     downloadFileCallBack("pdf");    
   });
   // doc.text("Hello world!", 10, 10);

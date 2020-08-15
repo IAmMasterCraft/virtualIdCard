@@ -18,7 +18,7 @@ function downloadPdf(userName) {
   }).then((canvas) => {
     document.querySelector("#capture").appendChild(canvas);
     var img=canvas.toDataURL("image/png", 1.0);
-    doc.addImage(img, 'JPEG', 10, 10, (canvas.width/2), (canvas.height/2));
+    doc.addImage(img, 'JPEG', 10, 10, (canvas.width/4), (canvas.height/4));
 //     doc.save(userName + ".pdf");
     var string = doc.output('datauristring');
     var iframe = "<iframe width='100%' height='100%' src='" + string + "'></iframe>"
